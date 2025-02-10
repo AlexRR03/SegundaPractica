@@ -1,0 +1,25 @@
+﻿@{
+	List<string> nombres = ViewData["NOMBRES"] as List<string>;
+}
+@model Comics
+
+	<h1>Buscador</h1>
+	<form method="post">
+	<select name="nombrecomic">
+		@foreach(string nombre in nombres)
+		{
+			<option  value="@nombre" >@nombre</option>
+		}
+	</select>
+	<button>Buscar</button>
+
+</form>
+
+<div>
+	<img src="@Model.Imagen" style="width:150px; height:200px" />
+	<p>@Model.Nombre</p>
+	<p>@Model.Descripcion</p>
+</div>
+
+
+	

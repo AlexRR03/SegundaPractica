@@ -1,0 +1,11 @@
+﻿@model List<Comics>
+
+	<h1>Lista de Comics</h1>
+	@foreach(Comics comic in Model)
+	{
+		 <div> 
+			<img src="@comic.Imagen" style="width:150px; height:200px" />
+			<p>@comic.Nombre</p>
+			<p>@comic.Descripcion</p>
+		 </div> 
+	}
